@@ -7,7 +7,6 @@
     <meta name="description" content="Street Photographer from Bangladesh. Minimal, fast, and clean photography portfolio." />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,135 +14,219 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- Cover Section: Edit name, subtitle, and CTAs as needed -->
-    <header class="cover">
-      <div class="container">
-        <div class="cover-compact">
-          <img class="avatar" src="assets/profile-pic.jpg" alt="Portrait of Kabiur Rahman Riyad" />
-          <div class="cover-text">
-            <h1 class="hero">Kabiur Rahman Riyad</h1>
-            <p class="subtitle">Street Photographer from Bangladesh</p>
-            <div class="cta cta-icons">
-              <a class="btn btn-compact" href="./kabiur_rahman_riyad_cv.html">View Photography CV</a>
-              <!-- Update social/contact links here if you prefer to keep them in HTML -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand">
+          <span class="brand-dot"></span>
+          <span class="brand-text">Kabiur Rahman Riyad</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span><span></span>
+          </button>
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" aria-labelledby="hero-heading">
+        <div class="container hero-grid">
+          <div class="hero-primary">
+            <p class="eyebrow">Street Photography • Bangladesh</p>
+            <h1 id="hero-heading" class="hero-title">Quiet stories from everyday streets.</h1>
+            <p class="hero-body">
+              I’m Riyad, a Bangladeshi street and lifestyle photographer, among many other things.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="./kabiur_rahman_riyad_cv.html">View Photography CV</a>
+              <a class="btn btn-ghost" href="#photos">View featured photos</a>
+            </div>
+            <div class="hero-meta">
+              <span>Based in Bangladesh</span>
+              <span>Open to collaborations & commissions</span>
+            </div>
+            <div class="hero-social">
+              <a class="icon-btn" href="mailto:kabiur.riyad@gmail.com" aria-label="Email" title="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
+                  <path d="m22 6-10 7L2 6"></path>
+                </svg>
+              </a>
               <a class="icon-btn" href="https://www.instagram.com/kabiur.riyad" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                   <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
                 </svg>
               </a>
               <a class="icon-btn" href="https://github.com/kabiur-riyad" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.29-1.54 3.3-1.22 3.3-1.22.66 1.64.24 2.86.12 3.16.77.83 1.24 1.9 1.24 3.19 0 4.59-2.8 5.6-5.47 5.9.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5Z"></path>
-                </svg>
-              </a>
-              <a class="icon-btn" href="mailto:kabiur.riyad@gmail.com" aria-label="Email" title="Email">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
-                  <path d="m22 6-10 7L2 6"></path>
                 </svg>
               </a>
             </div>
           </div>
+          <aside class="hero-panel" aria-label="Featured image">
+            <div class="hero-photo-frame">
+              <img src="assets/1 Other Side of the Road.jpg" alt="Street scene from Bangladesh" loading="lazy" />
+            </div>
+            <div class="hero-photo-meta">
+              <p class="hero-photo-title">"Other Side of the Road"</p>
+              <p class="hero-photo-caption">Within the motions of life and vehicles in a busy Bangladeshi street, a
+ shoe repairman continues his work.</p>
+            </div>
+          </aside>
         </div>
-      </div>
-    </header>
+      </section>
 
-    <main>
-      <!-- Bio Section: Content pulled from Reference/information.txt (edit freely) -->
-      <section id="bio" class="section">
-        <div class="container narrow">
-          <h2 class="section-title">About</h2>
-          <div class="card">
+      <section id="about" class="section">
+        <div class="container two-column">
+          <div class="section-heading">
+            <h2 class="section-title">About</h2>
+            <p class="section-kicker">Photographing the in-between moments.</p>
+          </div>
+          <div class="card card-body">
             <p>Hi, I’m Riyad.</p>
-            <p>I’m a photographer from Bangladesh who loves documenting everyday life, focusing on workers, small moments, and quiet stories that often go unnoticed. My photography leans toward street work, shaped by the colors, light, and rhythm of Bangladeshi streets and landscapes.</p>
-            <p>Most of my photos are free to download and use, and I enjoy sharing them with anyone who finds value in them. You can find them on my <a href="https://www.pexels.com/@riiyad" target="_blank" rel="noopener">Pexels</a> or <a href="https://unsplash.com/@riiyad" target="_blank" rel="noopener">Unsplash</a> page.</p>
-            <p>Alongside photography, I build (vibe code mostly) simple tools that make creative workflows easier. I created <a href="https://github.com/kabiur-riyad/PDFolio-Desktop" target="_blank" rel="noopener">PDFolio</a>, an offline photography portfolio generator that helps photographers organize and present their work with clean, minimal design. I also made a web version of it.</p>
-            <p>I’m always exploring new ways to combine visual storytelling with practical software, one photo and one project at a time.</p>
+            <p>
+              I am a Bangladeshi photographer interested in capturing quiet, emotionally resonant moments from everyday life. My work explores mostly themes of isolation, belonging, and the relationship between people and their environments, but sometimes I create images just to showcase the beauty of the subject. I aim to create images that balance documentary realism with personal storytelling.
+            </p>
+            <p>
+              Most of my photos are free to download and use. You can find them on
+              <a href="https://www.pexels.com/@riiyad" target="_blank" rel="noopener">Pexels</a>
+              or
+              <a href="https://unsplash.com/@riiyad" target="_blank" rel="noopener">Unsplash</a>.
+            </p>
+            <p>
+              Alongside photography, I build simple tools that make creative workflows easier. I created
+              <a href="https://github.com/kabiur-riyad/PDFolio-Desktop" target="_blank" rel="noopener">PDFolio</a>, an offline photography portfolio
+              generator that helps photographers organize and present their work with clean, minimal design – plus a web version of it.
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- Featured Photos Section: Images populated by script.js from the GALLERY array -->
-      <section id="photos" class="section">
+      <section id="photos" class="section section-muted" aria-labelledby="photos-heading">
         <div class="container">
-          <h2 class="section-title">Featured Photos</h2>
+          <div class="section-header-inline">
+            <div>
+              <h2 id="photos-heading" class="section-title">Featured Photos</h2>
+              <p class="section-kicker">A small selection of my favorite photos.</p>
+            </div>
+            <div class="section-actions">
+              <a class="btn btn-ghost" href="#contact">Licensing & prints</a>
+              <a class="btn btn-ghost" href="https://www.pexels.com/@riiyad" target="_blank" rel="noopener">Pexels</a>
+              <a class="btn btn-ghost" href="https://unsplash.com/@riiyad" target="_blank" rel="noopener">Unsplash</a>
+            </div>
+          </div>
           <div id="gallery" class="gallery" aria-live="polite"></div>
           <noscript>
-            <p>Please enable JavaScript to view the photo gallery.</p>
+            <p class="muted">Enable JavaScript to view the photo gallery.</p>
           </noscript>
         </div>
       </section>
 
-      <!-- Projects Section: Minimal card for PDFolio -->
-      <section id="projects" class="section">
+      <section id="projects" class="section" aria-labelledby="projects-heading">
         <div class="container">
-          <h2 class="section-title">Coding Projects</h2>
-          <div class="projects">
+          <div class="section-header-inline">
+            <div>
+              <h2 id="projects-heading" class="section-title">Coding Projects</h2>
+              <p class="section-kicker">Tools built for photographers and visual work.</p>
+            </div>
+          </div>
+          <div class="projects-grid">
             <article class="project-card">
-              <div class="project-content">
+              <div class="project-main">
                 <h3 class="project-title">PDFolio</h3>
-                <p class="project-desc">An offline photography portfolio generator that focuses on clean layout and simplicity.</p>
+                <p class="project-desc">
+                  An offline photography portfolio generator focused on clean layouts and simple workflows.
+                </p>
+                <ul class="project-meta">
+                  <li>Desktop app</li>
+                  <li>PDF export</li>
+                  <li>Minimal templates</li>
+                </ul>
               </div>
               <div class="project-actions">
-                <a class="btn btn-ghost" href="https://github.com/kabiur-riyad/PDFolio-Desktop" target="_blank" rel="noopener" aria-label="PDFolio on GitHub">View on GitHub</a>
+                <a class="btn btn-ghost" href="https://github.com/kabiur-riyad/PDFolio-Desktop" target="_blank" rel="noopener">View on GitHub</a>
               </div>
             </article>
+
             <article class="project-card">
-              <div class="project-content">
+              <div class="project-main">
                 <h3 class="project-title">PDFolio Web</h3>
-                <p class="project-desc">The web version of PDFolio.</p>
+                <p class="project-desc">
+                  A browser-based version of PDFolio for quickly building simple, shareable portfolios.
+                </p>
+                <ul class="project-meta">
+                  <li>Web app</li>
+                  <li>Fast preview</li>
+                  <li>Clean typography</li>
+                </ul>
               </div>
               <div class="project-actions">
-                <a class="btn btn-ghost" href="https://kabiur-riyad.github.io/pdfolio/" target="_blank" rel="noopener" aria-label="Open PDFolio Web">Open</a>
+                <a class="btn btn-ghost" href="https://kabiur-riyad.github.io/pdfolio/" target="_blank" rel="noopener">Open</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section: Keep it small and simple -->
-      <section id="contact" class="section">
-        <div class="container narrow">
-          <h2 class="section-title">Contact</h2>
-          <ul class="contact-list">
-            <li>
-              <a class="icon-btn" href="mailto:kabiur.riyad@gmail.com" aria-label="Email" title="Email">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
-                  <path d="m22 6-10 7L2 6"></path>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="icon-btn" href="https://www.instagram.com/kabiur.riyad" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="icon-btn" href="https://github.com/kabiur-riyad" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.29-1.54 3.3-1.22 3.3-1.22.66 1.64.24 2.86.12 3.16.77.83 1.24 1.9 1.24 3.19 0 4.59-2.8 5.6-5.47 5.9.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5Z"></path>
-                </svg>
-              </a>
-            </li>
-          </ul>
+      <section id="contact" class="section section-muted" aria-labelledby="contact-heading">
+        <div class="container contact-layout">
+          <div class="section-heading">
+            <h2 id="contact-heading" class="section-title">Contact</h2>
+            <p class="section-kicker">For collaborations, commissions, or licensing.</p>
+          </div>
+          <div class="card contact-card">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">Email</span>
+                <a href="mailto:kabiur.riyad@gmail.com">kabiur.riyad@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-label">Instagram</span>
+                <a href="https://www.instagram.com/kabiur.riyad" target="_blank" rel="noopener">@kabiur.riyad</a>
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/kabiur-riyad" target="_blank" rel="noopener">kabiur-riyad</a>
+              </li>
+            </ul>
+            <p class="contact-note">I read every message even if I can’t respond immediately.</p>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- Simple Lightbox (no frameworks) -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="muted">© <span id="year"></span> Kabiur Rahman Riyad</span>
+      </div>
+    </footer>
+
     <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
       <button class="lightbox-close" aria-label="Close" title="Close">×</button>
       <img class="lightbox-image" alt="Expanded photo" />
     </div>
 
     <script defer src="./script.js"></script>
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="riiyad" data-description="Support me on Buy me a coffee!" data-message="Support me by buying me a coffee :)" data-color="#FF813F" data-position="Left" data-x_margin="18" data-y_margin="18"></script>
+    <script
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="riiyad"
+      data-description="Support me on Buy me a coffee!"
+      data-message="Support me by buying me a coffee :)"
+      data-color="#FF813F"
+      data-position="Left"
+      data-x_margin="18"
+      data-y_margin="18"
+    ></script>
   </body>
 </html>

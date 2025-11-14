@@ -1,17 +1,3 @@
-/*
-  Minimal Gallery + Lightbox
-  -------------------------------------------------------------------
-  - Update the GALLERY array below with your image paths in /assets
-  - You can use either strings (src only) or { src, alt } objects
-  - Example:
-      const GALLERY = [
-        'assets/photo-1.jpg',
-        { src: 'assets/photo-2.jpg', alt: 'Street scene in Dhaka' }
-      ];
-  - Tip: Keep filenames short and consistent.
-*/
-
-// EDIT THIS ARRAY: add your images from the assets/ folder
 const GALLERY = [
   { src: 'assets/1 Other Side of the Road.jpg', alt: 'Other Side of the Road' },
   { src: 'assets/2 Above the Horizon.jpg', alt: 'Above the Horizon' },
@@ -24,8 +10,12 @@ const GALLERY = [
   const lightboxEl = document.getElementById('lightbox');
   const lightboxImg = lightboxEl.querySelector('.lightbox-image');
   const closeBtn = lightboxEl.querySelector('.lightbox-close');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('.nav-list');
+  const yearEl = document.getElementById('year');
 
   let currentIndex = -1;
+  let lastFocused = null;
 
   function normalize(item) {
     return typeof item === 'string' ? { src: item, alt: '' } : item;
@@ -35,7 +25,8 @@ const GALLERY = [
     if (!galleryEl) return;
 
     if (!Array.isArray(GALLERY) || GALLERY.length === 0) {
-      galleryEl.innerHTML = '<p style="color:#6b7280;text-align:center">Add images to the GALLERY array in <code>script.js</code> and place files in <code>/assets</code>.</p>';
+      galleryEl.innerHTML =
+        '<p style="color:#6b7280;text-align:center">Add images to the GALLERY array in <code>script.js</code> and place files in <code>/assets</code>.</p>';
       return;
     }
 
@@ -48,7 +39,7 @@ const GALLERY = [
       a.setAttribute('data-index', String(index));
       a.addEventListener('click', (e) => {
         e.preventDefault();
-        openLightbox(index);
+        openLightbox(index, a);
       });
 
       const img = document.createElement('img');
@@ -66,13 +57,15 @@ const GALLERY = [
     galleryEl.appendChild(frag);
   }
 
-  function openLightbox(index) {
+  function openLightbox(index, triggerEl) {
     currentIndex = index;
+    lastFocused = triggerEl || document.activeElement;
     const item = normalize(GALLERY[currentIndex]);
     lightboxImg.src = item.src;
     lightboxImg.alt = item.alt || '';
     lightboxEl.classList.add('open');
     lightboxEl.setAttribute('aria-hidden', 'false');
+    closeBtn.focus();
     document.addEventListener('keydown', onKeydown);
   }
 
@@ -81,6 +74,9 @@ const GALLERY = [
     lightboxEl.setAttribute('aria-hidden', 'true');
     lightboxImg.src = '';
     document.removeEventListener('keydown', onKeydown);
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+    }
   }
 
   function next(delta) {
@@ -97,13 +93,29 @@ const GALLERY = [
     if (e.key === 'ArrowLeft') return next(-1);
   }
 
-  // Close when clicking backdrop or the close button
   lightboxEl.addEventListener('click', (e) => {
     if (e.target === lightboxEl) closeLightbox();
   });
   closeBtn.addEventListener('click', closeLightbox);
 
-  // Render on load
+  if (navToggle && navList) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navList.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navList.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  if (yearEl) {
+    yearEl.textContent = String(new Date().getFullYear());
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderGallery);
   } else {
