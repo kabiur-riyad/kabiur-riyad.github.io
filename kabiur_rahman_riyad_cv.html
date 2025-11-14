@@ -53,7 +53,22 @@
 
     footer{display:none}
 
-    @media (max-width:900px){.layout{grid-template-columns:1fr} .contact{text-align:left;min-width:0}}
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr}
+      .contact{text-align:left;min-width:0}
+    }
+
+    @media (max-width:600px){
+      .wrap{margin:20px auto;padding:16px}
+      .card{padding:20px}
+      header{flex-direction:column;align-items:flex-start;gap:16px}
+      .contact{text-align:left}
+      .avatar{width:70px;height:70px;font-size:24px}
+      h1{font-size:22px}
+      p{font-size:14px}
+      .layout{gap:20px;margin-top:20px}
+    }
+
     @media print{body{background:#fff}.wrap{margin:0;padding:0} .card{box-shadow:none;border-radius:0;padding:18px}}
 
     .muted{color:var(--muted)}
