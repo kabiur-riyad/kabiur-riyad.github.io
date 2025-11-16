@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://kabiur-riyad.github.io/sitemap.xml
